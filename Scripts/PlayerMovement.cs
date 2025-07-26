@@ -3,10 +3,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public Animator animator;
-    public float horizontalSpeed = 5f;
-    public float verticalSpeed = 5f;
+    [SerializeField] public Rigidbody2D rb;
+    [SerializeField] public Animator animator;
+    [SerializeField] public float horizontalSpeed = 5f;
+    [SerializeField] public float verticalSpeed = 5f;
     float horizontalMovement;
     float verticalMovement;
     int horizontalHeading = 1;

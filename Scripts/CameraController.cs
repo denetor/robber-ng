@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform player;
+    [SerializeField] public Transform player;
     private Vector3 offset = new Vector3(0f, 0f, -5f);
     private float smoothTime = 0.5f;
     private Vector3 velocity = Vector3.zero;
