@@ -3,8 +3,8 @@ using UnityEngine;
 // controller to manage the collection of items
 public class PlayerCollectController : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision) {
-        ICollectable item = collision.GetComponent<ICollectable>();
+    private void OnTriggerEnter2D(Collider2D collidedObject) {
+        ICollectable item = collidedObject.GetComponent<ICollectable>();
         PlayerController pc = GetComponent<PlayerController>();
         string collectedItemId;
 
@@ -18,6 +18,12 @@ public class PlayerCollectController : MonoBehaviour
             } else if (pc != null && collectedItemId == "gem") {
                 pc.AddGem();
             }
+        }
+
+        // if collided with exit, remove it
+        if (collidedObject.gameObject.name == "LevelExitTile") {
+            Debug.Log("You left this level");
+            Destroy(collidedObject.gameObject);
         }
     }
 }
