@@ -3,14 +3,15 @@ using UnityEngine;
 // maintains information about the player status
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private int keys;
-    [SerializeField] private int gems;
+    GameController gc;
+
+    void Awake() {
+        gc = GetComponent<GameController>();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        keys = 0;
-        gems = 0;
     }
 
     // Update is called once per frame
@@ -21,11 +22,15 @@ public class PlayerController : MonoBehaviour
 
     // add a key to the inventory
     public void AddKey() {
-        keys++;
+        if (gc) {
+            gc.AddKey();
+        }
     }
 
     // add a gem to the inventory
     public void AddGem() {
-        gems++;
+        if (gc) {
+            gc.AddGem();
+        }
     }
 }
