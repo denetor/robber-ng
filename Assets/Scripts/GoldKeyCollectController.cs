@@ -1,18 +1,22 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GoldKeyCollectController : MonoBehaviour, ICollectable
 {
-    public static event Action<int> OnGoldKeyCollect;
+    public static UnityEvent GoldKeyCollectEvent;
 
-    public string Collect() {
+    void Start() {
+        if (GoldKeyCollectEvent == null) {
+            GoldKeyCollectEvent = new UnityEvent();
+        }
+    }
+
+    public void Collect() {
         // publish event
-        OnGoldKeyCollect.Invoke(1);
+        GoldKeyCollectEvent.Invoke();
 
         // destroy this item
         Destroy(gameObject);
-
-        // return collected item id
-        return "goldkey";
     }
 }

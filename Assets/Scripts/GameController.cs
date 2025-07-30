@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class GameController : MonoBehaviour
     {
         keys = 0;
         gems = 0;
-        GoldKeyCollectController.OnGoldKeyCollect += AddKey();
+
+        GemCollectController.GemCollectEvent.AddListener(AddGem);
+        GoldKeyCollectController.GoldKeyCollectEvent.AddListener(AddKey);
     }
 
     // Update is called once per frame
@@ -22,12 +25,14 @@ public class GameController : MonoBehaviour
 
 
     // add a key to the inventory
-    public void AddKey(int n) {
-        keys++;
+    void AddKey() {
+        Debug.Log("Key collected");
+        keys ++;
     }
 
     // add a gem to the inventory
     public void AddGem() {
+        Debug.Log("Gem collected");
         gems++;
     }
 }

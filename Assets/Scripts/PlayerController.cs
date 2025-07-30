@@ -20,17 +20,4 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    // add a key to the inventory
-    public void AddKey() {
-        if (gc) {
-            gc.AddKey();
-        }
-    }
-
-    // add a gem to the inventory
-    public void AddGem() {
-        if (gc) {
-            gc.AddGem();
-        }
-    }
 }

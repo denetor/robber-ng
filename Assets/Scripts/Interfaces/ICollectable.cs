@@ -5,5 +5,5 @@ using UnityEngine;
 */
 public interface ICollectable
 {
-    public string Collect();
+    public void Collect();
 }
