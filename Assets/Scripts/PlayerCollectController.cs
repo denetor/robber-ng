@@ -4,8 +4,8 @@ using UnityEngine;
 public class PlayerCollectController : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collidedObject) {
-        ICollectable item = collidedObject.GetComponent<ICollectable>();
         PlayerController pc = GetComponent<PlayerController>();
+        ICollectable item = collidedObject.GetComponent<ICollectable>();
 
         if (item != null) {
             item.Collect();

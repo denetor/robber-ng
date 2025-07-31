@@ -15,7 +15,6 @@ public class GemCollectController : MonoBehaviour, ICollectable
     public void Collect() {
         // publish event
         GemCollectEvent.Invoke();
-        Debug.Log("Invoked GemCollectEvent");
 
         // destroy this item
         Destroy(gameObject);
