@@ -7,8 +7,10 @@ public class AlarmSensorCollider : MonoBehaviour
     [SerializeField] UnityEvent onTriggerExit;
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Enter alarm zone");
-        onTriggerEnter.Invoke();
+        if (other.tag == "Player") {
+            Debug.Log("Enter alarm zone");
+            onTriggerEnter.Invoke();
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) {
