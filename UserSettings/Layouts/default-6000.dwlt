@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 893
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -345,10 +345,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 70}
-    m_SelectedIDs: 42b70000
-    m_LastClickedID: 46914
-    m_ExpandedIDs: 0000000036b7000038b700003ab700003cb700003eb7000040b7000042b7000044b7000046b7000048b700004ab700004cb70000
+    scrollPos: {x: 0, y: 120}
+    m_SelectedIDs: 4ab70000
+    m_LastClickedID: 46922
+    m_ExpandedIDs: 0000000052b7000054b7000056b7000058b700005ab700005cb700005eb7000060b7000062b7000064b70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000036b7000038b700003ab700003cb700003eb7000040b7000042b7000044b7000046b7000048b700004ab700004cb70000
+    m_ExpandedIDs: 0000000052b7000054b7000056b7000058b700005ab700005cb700005eb7000060b7000062b7000064b70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,8 +403,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b0b50000
-    m_LastClickedInstanceID: 46512
+    m_SelectedInstanceIDs: ccefffff
+    m_LastClickedInstanceID: -4148
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 58c8000026e00000
     m_RenameOverlay:
@@ -423,7 +423,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 06fbffffc0b5000034b60000
+      m_ExpandedIDs: 06fbffffc0b50000e0b5000034b60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1241,9 +1241,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -31.39, y: -15.41, z: 0}
+    m_Target: {x: -15.118113, y: 4.8915787, z: -0.030994989}
     speed: 2
-    m_Value: {x: -31.39, y: -15.41, z: 0}
+    m_Value: {x: -15.118113, y: 4.8915787, z: -0.030994989}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1293,9 +1293,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10
+    m_Target: 8.075815
     speed: 2
-    m_Value: 10
+    m_Value: 8.075815
   m_Ortho:
     m_Target: 1
     speed: 2
