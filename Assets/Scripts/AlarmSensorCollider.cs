@@ -15,6 +15,9 @@ public class AlarmSensorCollider : MonoBehaviour
     }
 
     void OnTriggerExit2D(Collider2D other) {
-        onTriggerExit.Invoke();
+        if (other.tag == "Player")
+        {
+            onTriggerExit.Invoke();
+        }
     }
 }
