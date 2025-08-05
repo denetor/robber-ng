@@ -18929,6 +18929,7 @@ GameObject:
   - component: {fileID: 1626272562}
   - component: {fileID: 1626272564}
   - component: {fileID: 1626272565}
+  - component: {fileID: 1626272566}
   m_Layer: 0
   m_Name: SwimCollider
   m_TagString: Untagged
@@ -19008,7 +19009,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -19031,6 +19032,18 @@ PolygonCollider2D:
       - {x: 3.5872543, y: -12.52837}
       - {x: 3.3934808, y: -1.6192126}
   m_UseDelaunayMesh: 0
+--- !u!114 &1626272566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626272561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 241ef597e4a6b339facf373f9be0aceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1674020899
 GameObject:
   m_ObjectHideFlags: 0
@@ -19277,7 +19290,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0625, y: 0.8125}
+    oldSize: {x: 1.0625, y: 1.0625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

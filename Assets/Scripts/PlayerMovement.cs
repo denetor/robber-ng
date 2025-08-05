@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMovement;
     float verticalMovement;
     int horizontalHeading = 1;
-    bool isSwimming = false;
+    [SerializeField] bool isSwimming = false;
 
     public void setSwimming(bool swimming)
     {
