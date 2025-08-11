@@ -59,13 +59,11 @@ public class PlayerMovement : MonoBehaviour
             if (isSwimming)
             {
                 rb.GetComponent<SpriteRenderer>().color = new Color(0.7f, 0.7f, 1f, 0.7f); // Change color to indicate swimming
-                Debug.Log("Draining air while swimming");
                 breathSystem.Change(-airDrainSpeedSwimming * Time.deltaTime);
             }
             else
             {
                 rb.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f); // Change color to indicate swimming
-                Debug.Log("Regernerating air while swimming");
                 breathSystem.Change(airGainSpeed * Time.deltaTime);
             }
         }

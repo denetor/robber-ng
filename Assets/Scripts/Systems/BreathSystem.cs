@@ -56,7 +56,6 @@ public class BreathSystem : MonoBehaviour
             breath = maxBreath;
         }
         breathChangedEvent.Invoke(rb, amount, breath, maxBreath);
-        Debug.Log($"Breath changed: {amount}, Current: {breath}, Max: {maxBreath}");
         if (breathSlider != null)
         {
             breathSlider.value = breath;
