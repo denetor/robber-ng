@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     private Text levelCompleteText;
     private Text levelCompleteReasonText;
 
+    public static UnityEvent<GameStatus, string> ChangeStatusEvent;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,6 +34,11 @@ public class GameController : MonoBehaviour
 
         GemCollectController.GemCollectEvent.AddListener(AddGem);
         GoldKeyCollectController.GoldKeyCollectEvent.AddListener(AddKey);
+        if (ChangeStatusEvent == null)
+        {
+            ChangeStatusEvent = new UnityEvent<GameStatus, string>();
+            ChangeStatusEvent.AddListener(OnChangeStatusEvent);
+        }
     }
 
 
@@ -40,6 +47,10 @@ public class GameController : MonoBehaviour
     {
         if (gameStatus == GameStatus.NotStarted || gameStatus == GameStatus.Completed || gameStatus == GameStatus.Failed)
         {
+            keys = 0;
+            gems = 0;
+            gemsIndicator.text = "Gems: 0";
+            keysIndicator.text = "Keys: 0";
             SetGameStatus(GameStatus.InProgress);
         }
     }
@@ -58,6 +69,16 @@ public class GameController : MonoBehaviour
     {
         gems++;
         gemsIndicator.text = "Gems: " + gems;
+    }
+
+
+    private void OnChangeStatusEvent(GameStatus newStatus, string reason)
+    {
+        SetGameStatus((GameStatus) newStatus);
+        if (!string.IsNullOrEmpty(reason) && levelCompleteReasonText != null)
+        {
+            levelCompleteReasonText.text = reason;
+        }
     }
 
 

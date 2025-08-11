@@ -38,8 +38,7 @@ public class BreathSystem : MonoBehaviour
     {
         if (breath <= 0)
         {
-            // TODO Handle breath depletion, e.g., trigger a warning or disable actions
-            Debug.LogWarning("Breath depleted!");
+            GameController.ChangeStatusEvent?.Invoke(GameStatus.Failed, "You drowned!");
         }
     }
 

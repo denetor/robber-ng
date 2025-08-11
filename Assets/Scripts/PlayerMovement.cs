@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float horizontalSpeed = 5f;
     [SerializeField] private float verticalSpeed = 5f;
     // Speed at which air drains when swimming, in units per second
-    private float airDrainSpeedSwimming = 5f;
+    private float airDrainSpeedSwimming = 15f;
     // Speed at which air gains when not swimming, in units per second
     private float airGainSpeed = 10f;
     float horizontalMovement;

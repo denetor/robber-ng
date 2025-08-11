@@ -12,9 +12,10 @@ public class PlayerCollectController : MonoBehaviour
         }
 
         // if collided with exit, remove it
-        if (collidedObject.gameObject.name == "LevelExitTile") {
-            Debug.Log("You left this level");
+        if (collidedObject.gameObject.name == "LevelExitTile")
+        {
             Destroy(collidedObject.gameObject);
+            GameController.ChangeStatusEvent?.Invoke(GameStatus.Completed, "Level completed");
         }
     }
 }
