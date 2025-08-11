@@ -51,6 +51,8 @@ public class GameController : MonoBehaviour
             gems = 0;
             gemsIndicator.text = "Gems: 0";
             keysIndicator.text = "Keys: 0";
+            GameObject startPosition = GameObject.Find("PlayerStartPosition");
+            GameObject.Find("Player").transform.position = new Vector3(startPosition.transform.position.x, startPosition.transform.position.y, 0);
             SetGameStatus(GameStatus.InProgress);
         }
     }
