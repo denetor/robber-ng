@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour
     {
         keys = 0;
         gems = 0;
-        air = 100f;
         gemsIndicator.text = "Gems: 0";
         keysIndicator.text = "Keys: 0";
 
@@ -39,21 +38,6 @@ public class GameController : MonoBehaviour
         gemsIndicator.text = "Gems: " + gems;
     }
 
-    public float getAir()
-    {
-        return air;
-    }
-
-    public void setAir(float value)
-    {
-        air = Mathf.Clamp(value, 0f, 100f);
-        if (air <= 0f)
-        {
-            // Handle drowning logic here
-            Debug.Log("Player has drowned!");
-            // You might want to reset the game or show a game over screen
-        }
-    }
 
 }
 

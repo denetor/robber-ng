@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class BreathSystem : MonoBehaviour
 {
     [SerializeField, Tooltip("Owner of this system")] private Rigidbody2D rb;
     [SerializeField, Tooltip("Max breath points")] private float maxBreath = 100f;
     [SerializeField, Tooltip("Current breath points")] private float breath;
+    [SerializeField, Tooltip("Connect a slider to have it changed as the breath changes")] private Slider breathSlider;
 
     // evento emesso quando i valori cambiano <actor, amount, currentBreath, maxBreath>
     // this event is used to update the UI or trigger other effects when value changes
@@ -21,6 +23,13 @@ public class BreathSystem : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         maxBreath = 100f;
         breath = maxBreath;
+
+        if (breathSlider != null)
+        {
+            breathSlider.maxValue = maxBreath;
+            breathSlider.minValue = 0f;
+            breathSlider.value = breath;
+        }
     }
 
 
@@ -48,5 +57,9 @@ public class BreathSystem : MonoBehaviour
         }
         breathChangedEvent.Invoke(rb, amount, breath, maxBreath);
         Debug.Log($"Breath changed: {amount}, Current: {breath}, Max: {maxBreath}");
+        if (breathSlider != null)
+        {
+            breathSlider.value = breath;
+        }
     }
 }
